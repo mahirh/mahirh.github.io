@@ -27,6 +27,26 @@
 
     OneDrive.save(odOptions);
   }
+      WL.init({ client_id: "7a771899-8c49-416a-8fd5-b8c322bc839c", redirect_uri: 'https://mahirh.github.io/' });
+WL.login({
+        scope: "wl.skydrive wl.signin"
+    }).then(
+        function(response) {
+            WL.fileDialog({
+                mode: "open",
+                select: "multi"
+            }).then(
+                function (response) {
+                },
+                function (responseFailed) {
+                }
+            );
+        },
+
+        function(response) {
+            log("Failed to authenticate.");
+        }
+    );
 </script>
   </head>
   <body>
