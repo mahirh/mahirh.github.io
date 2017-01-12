@@ -2,9 +2,31 @@
 <html>
   <head>
     <title>Save to Drive Demo: Basic Page</title>
-    <link rel="canonical" href="http://mahirh.github.io">
-    <script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js"></script>
+    <link rel="canonical" href="https://mahirh.github.io">
+    <script type="text/javascript" src="//js.live.net/v7.0/wl.js"></script>
+<script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js"></script>
+
+
     <script type="text/javascript">
+
+ function launchOneDrivePicker() {
+        var odOptions = {
+            clientId: "7a771899-8c49-416a-8fd5-b8c322bc839c",
+            action: "download",
+            multiSelect: true,
+            openInNewWindow: true,
+            advanced: {
+                queryParameters: "select=id,name,size,file,folder,photo",
+
+                redirectUri: "https://mahirh.github.io"
+            },
+            success: function (response) { /* success handler */      },
+            cancel: function () { /* cancel handler */ },
+            error: function (e) { /* error handler */ },
+        };
+        OneDrive.open(odOptions);
+    }
+
   function launchSaveToOneDrive(){
     var odOptions = {
   clientId: "7a771899-8c49-416a-8fd5-b8c322bc839c",
