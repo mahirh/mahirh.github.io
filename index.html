@@ -4,16 +4,7 @@
     <title>Save to Drive Demo: Basic Page</title>
     <link rel="canonical" href="http://mahirh.github.io">
     <script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js"></script>
-  </head>
-  <body>
-   <div class="g-savetodrive"
-         data-src="https://access.cdn.redhat.com/content/origin/files/sha256/12/120acbca7b3d55465eb9f8ef53ad7365f2997d42d4f83d7cc285bf5c71e1131f/rhel-server-7.3-x86_64-dvd.iso?_auth_=1484243254_0bea39cd31bee9bbe48adf128f2f40a7"
-         data-filename="rhel-server-7.3-x86_64-dvd.iso"
-         data-sitename="mahirh.github.io">
-    </div>
-    
-
-<script type="text/javascript">
+    <script type="text/javascript">
   function launchSaveToOneDrive(){
     var odOptions = {
   clientId: "7a771899-8c49-416a-8fd5-b8c322bc839c",
@@ -32,6 +23,16 @@
     OneDrive.save(odOptions);
   }
 </script>
+  </head>
+  <body>
+   <div class="g-savetodrive"
+         data-src="https://access.cdn.redhat.com/content/origin/files/sha256/12/120acbca7b3d55465eb9f8ef53ad7365f2997d42d4f83d7cc285bf5c71e1131f/rhel-server-7.3-x86_64-dvd.iso?_auth_=1484243254_0bea39cd31bee9bbe48adf128f2f40a7"
+         data-filename="rhel-server-7.3-x86_64-dvd.iso"
+         data-sitename="mahirh.github.io">
+    </div>
+    
+
+
 
 <input id="fileUploadControl" name="fileUploadControl" type="file" />
 <button onclick="launchSaveToOneDrive">Save to OneDrive</button>
